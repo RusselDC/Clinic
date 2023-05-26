@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+        /* HEADER */
+        * {
+            font-family: 'Cabin', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: grid;
+            grid-template-columns: 2fr 6fr 1fr;
+            grid-template-areas: 'logoName headerLinks headerButtons';
+            align-items: center;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            border: solid black;
+            border-width: 1px 0;
+            position: sticky;
+            top: 0;
+            height: auto;
+        }
+        #logo {
+            height: 65px;
+        }
+        #clinicName {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        #logoName {
+            display: flex;
+            align-items: center;
+            align-self: center;
+        }
+        .logoName {
+            margin-right: 10px;
+        }
+        .logoName>a{
+            text-decoration: none;
+            color: white;
+        }
+        .logoName>a:hover{
+            color: #333;
+            background-color: white;
+            padding-left: 5px;
+            padding: 5px 10px 5px;
+            font-size: 40px;
+            border-radius: 10px;
+            transition: all 0.3s ease 0s;
+        }
+        #headerLinks, #headerLinks a {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 10px;
+        }
+        #headerLinks a {
+            margin-right: 30px;
+            font-size: 13px;
+            text-decoration: none;
+            color: #333;
+        }
+        #headerButtons {
+            display: flex;
+            justify-content: right;
+            float: right;
+        }
+        .headerButtons button {
+            background-color: white;
+            border-radius: 5px;
+            width: 75px;
+            border: none;
+
+            padding: 5px 10px;
+            margin-left: 10px;
+
+            transition: all 0.3s ease 0s;
+        }
+        .headerButtons button:hover {
+            background-color: #333;
+            color: white;
+            border-style: solid;
+            border-width: 1px;
+            padding: 0%;
+        }
+        @media (max-width: 414px){
+            header{
+                height: 160px;
+
+            }
+        }
+        @media (max-width:220px){
+            header{
+                height: 180px;
+            }
+        }
+
+        @media screen and (max-width: 684px) {
+            #headerLinks, #headerLinks a {
+                display: block;
+                margin: 5px 0px 5px 10px;
+            }
+            #headerButtons {
+                display: block;
+            }
+            .headerButtons button {
+                margin: 2.5px 15px;
+            }
+        }
+        @media screen and (max-width: 414px) {
+            header {
+                display: block;
+            }
+            #logoName {
+                display: flex;
+                justify-content: center;
+            }
+            #headerLinks {
+                display: flex;
+                justify-content: space-around;
+            }
+            #headerButtons {
+                display: flex;
+                justify-content: center;
+            }
+            .headerButtons button {
+                margin: 0 5px;
+            }
+        }
+        main{
+            margin: 0%;
+            width: 100%;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            background-image: linear-gradient(#A6C0EE, #FAC5EC);
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 800px;
+        }
+        #form-container{
+            height: auto;
+            background: white;
+            border-width: 1px;
+            width: 40%;
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+        }
+        #button{
+            margin-top: 10px;
+            height: auto;
+            text-align: center;
+        }
+        footer{
+            
+            margin-top: auto;
+            height: 82px;
+            width: 100%;
+            background-color: #555;
+        }
+        @media (max-width:1000px){
+            main{
+                height: auto;
+            }
+            .col-sm-5{
+                margin-bottom: 10px;
+            }
+            #form-container{
+                width: 90%;
+            }
+            #register{
+                width: 90%;
+            }
+        }
+        @media(min-height:1000px){
+            footer{
+                background-color: white;
+            }
+        }
+        

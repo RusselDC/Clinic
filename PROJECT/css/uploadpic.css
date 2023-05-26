@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+html::-webkit-scrollbar{
+    display: none;
+}
+body{
+    height: 99.4vh;
+    width: 100vw;
+    padding: 0%;
+    font-family: 'Cabin', sans-serif;
+    margin: 0%;
+}
+#container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+        "nav"
+        "body"
+        
+    ;
+    text-transform: uppercase;
+    grid-gap: 1rem;
+    margin: 0%;
+    height: 100%;
+    width: 100%;
+}
+nav{
+    grid-area: nav;
+    height: auto;
+    background: #a7ffeb;
+    grid-area: nav;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+     background-color: #333;
+    color: white;
+}
+#dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+#dropdown-content a:hover {
+    background-color: #555
+}
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+#brand-title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    margin: .5rem .5rem 1rem;
+}
+.toggle-button #bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+#body{
+    grid-area: body;
+}
+@media (max-width: 666px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+  .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+#form-container{
+    width: 50%;
+    height: 33%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+}
+#left{
+    width: 30%;
+    height: 100%;
+    border-radius: 200px;
+    
+}
+#picture{
+    width: 100%;
+    height: 100%;
+    border-radius: 200px;
+    border-width: 1px;
+    border-style: solid;
+}
+#right{
+    width: 70%;
+    height: 100%;
+}
+#upload{
+    height: auto;
+    width: auto;
+    margin-top: 125px;
+    margin-left: 50px;
+}
+#header{
+    text-align: center;
+    margin-bottom: 10px;
+}
+#button{
+    padding: 10px 20px 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+#button:hover{
+    color: #333;
+    background-color: white;
+    transition: all 0.3s ease 0s;
+}
+#buttons::-webkit-file-upload-button{
+    padding: 10px 20px 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+#buttons::-webkit-file-upload-button:hover{
+    color: #333;
+    background-color: white;
+    transition: all 0.3s ease 0s;
+}
+@media(max-width:666px){
+    #form-container{
+        flex-direction: column;
+        width: 80%;
+        height: 90%;
+    }
+    #picture{
+        height: 80%;
+        width: 80%;
+    }
+    #left{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        margin: 0%;
+    }
+    #right{
+        width: 100%;
+        height: 50%;
+        padding: 0%;
+    }
+    #upload{
+        text-align: center;
+        padding: 0%;
+        margin: 0%;
+    }
+}
+@media(max-width:1000px){
+    #form-container{
+        flex-direction: column;
+        width: 80%;
+        height: 90%;
+    }
+    #picture{
+        height: 60%;
+        width: 60%;
+    }
+    #left{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        margin: 0%;
+    }
+    #right{
+        width: 100%;
+        height: 50%;
+        padding: 0%;
+    }
+    #upload{
+        text-align: center;
+        padding: 0%;
+        margin: 0%;
+    }
+}
+@media(max-width:1281px){
+    #button{
+        margin-top: 10px;
+    }
+}
